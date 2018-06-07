@@ -9,3 +9,45 @@ jQuery 库包含以下特性：
 	HTML DOM 遍历和修改
 	AJAX
 	Utilities
+
+
+
+jQuery效果
+	隐藏显示
+	$(selector).hide(speed,callback);
+	$(selector).show(speed,callback);
+	或者
+	$(selector).toggle(speed,callback);
+
+	淡入淡出
+	$(selector).fadeIn(speed,callback);
+	$(selector).fadeOut(speed,callback);
+	或者
+	$(selector).fadeToggle(speed,callback);
+	设定透明度
+	$(selector).fadeTo(speed,opacity,callback);//opactiy介于0-1之间
+
+	滑动
+	$(selector).slideDown(speed,callback);
+	$(selector).slideUp(speed,callback);
+	或者
+	$(selector).slideToggle(speed,callback);
+
+	动画
+	$(selector).animate({params},speed,callback);//params可以是单个属性。
+	也可以是多个属性。不过，需要记住一件重要的事情：当使用 animate() 时，必须使用 Camel 标记法书写所有的属性名，比如，必须使用 paddingLeft 而不是 padding-left，使用 marginRight 而不是 margin-right。
+	也可以定义相对值（该值相对于元素的当前值）。需要在值的前面加上 += 或 -=。
+	甚至可以把属性的动画值设置为 "show"、"hide" 或 "toggle"。
+	编写多个 animate() 调用时，逐一执行
+
+	停止动画或者效果
+	$(selector).stop(stopAll,goToEnd);
+	可选的 stopAll 参数规定是否应该清除动画队列。默认是 false，即仅停止活动的动画，允许任何排入队列的动画向后执行。
+	可选的 goToEnd 参数规定是否立即完成当前动画。默认是 false。
+
+	callback
+	动画在执行完成之后才执行
+
+	chaining
+	Chaining 允许我们在一条语句中允许多个 jQuery 方法（在相同的元素上）。
+	例如：$("#p1").css("color","red").slideUp(2000).slideDown(2000);
