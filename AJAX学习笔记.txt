@@ -1,0 +1,34 @@
+AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。
+AJAX = 异步 JavaScript和XML（标准通用标记语言的子集）。
+AJAX 是一种用于创建快速动态网页的技术。
+
+通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。
+传统的网页（不使用 AJAX）如果需要更新内容，必须重载整个网页页面。
+
+AJAX的工作原理相当于在用户和服务器之间加了—个中间层(AJAX引擎)，使用户操作与服务器响应异步化。
+
+AJAX - 创建 XMLHttpRequest 对象
+
+XMLHttpRequest 是 AJAX 的基础。
+XmlHttpRequest 术语缩写为XHR，中文可以解释为可扩展超文本传输请求。 
+XMLHttpRequest 对象可以在不向服务器提交整个页面的情况下，实现局部更新网页。
+
+AJAX - 向服务器发送请求
+
+XMLHttpRequest 对象用于和服务器交换数据。
+当你的页面全部加载完毕后，客户端会通过 XMLHttpRequest 对象向服务器请求数据，服务器端接受数据并处理后，向客户端反馈数据。
+向服务器发送请求
+
+如需将请求发送到服务器，我们使用 XMLHttpRequest 对象的 open() 和 send() 方法：
+xmlhttp.open("GET","ajax_info.txt",true);
+xmlhttp.send();
+
+AJAX - 服务器 响应
+
+由于 HTTP 响应是由服务端发出的，并且服务器做出响应需要时间（比如网速慢等原因），所以我们需要监听服务器响应的状态，然后才能进行处理。
+服务器响应
+
+如需获得来自服务器的响应，请使用 XMLHttpRequest 对象的 responseText 或 responseXML 属性。
+属性	描述
+responseText	获得字符串形式的响应数据。
+responseXML	获得 XML 形式的响应数据。
